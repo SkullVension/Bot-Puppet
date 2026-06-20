@@ -1,0 +1,1026 @@
+/* ==========================================
+ * 🎭 BotPuppet v1.0.0
+ * Built by: SkullVension (https://github.com/skullvension)
+ * ========================================== */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bot Control Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/jpeg" href="data:image/png;base64,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">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <nav class="rail">
+    <div class="rail-home" id="railHome" title="Dashboard">
+      <div class="custom-logo-container"></div>
+    </div>
+    <div class="rail-divider"></div>
+    <div class="rail-guilds" id="railGuilds"></div>
+    <div class="rail-divider"></div>
+    <div class="rail-dm" id="railDm" title="Direct Messages">
+      <span>💬</span>
+    </div>
+    <div class="rail-settings" id="railSettings" title="Settings">
+      <span>⚙</span>
+    </div>
+  </nav>
+
+  <main class="view-host">
+
+    <section class="view view-active" id="viewDashboard">
+      <div class="dashboard-scroll">
+        <header class="dashboard-header">
+          <div>
+            <p class="dashboard-eyebrow">Server Management</p>
+            <h1 id="dashboardTitle">Welcome back</h1>
+            <p class="dashboard-sub" id="dashboardSub">Connecting to your bot...</p>
+          </div>
+          <div class="bot-pill" id="botPill">
+            <img id="botPillAvatar" alt="" class="bot-pill-avatar">
+            <div>
+              <p class="bot-pill-name" id="botPillName">—</p>
+              <p class="bot-pill-status"><span class="status-dot online"></span>Online</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-grid">
+
+          <div class="card card-wide">
+            <div class="card-head">
+              <h2>Your Servers</h2>
+              <p>Pick a server to open its channels and chat history.</p>
+            </div>
+            <div class="guild-grid" id="guildGrid"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Bot Profile</h2>
+              <p>Update how your bot appears across every server it's in.</p>
+            </div>
+            <div class="identity-form">
+              <div class="identity-avatar-row">
+                <img id="identityAvatarPreview" class="identity-avatar-preview" alt="">
+                <label class="ghost-button" for="identityAvatarInput">Choose a new photo</label>
+                <input type="file" id="identityAvatarInput" accept="image/*" hidden>
+              </div>
+              <label class="field-label" for="identityUsernameInput">Bot username</label>
+              <input type="text" id="identityUsernameInput" class="text-input" placeholder="Type a new name...">
+              <button class="primary-button" id="identitySaveButton">Save profile changes</button>
+              <p class="field-hint">Discord limits how often a username can change, so save this sparingly.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h2>Announcement Designer</h2>
+              <p>Build a rich, styled message to post into any channel.</p>
+            </div>
+            <p class="card-body-text">Design a structured announcement with a title, colors, images and footer, then send it straight into a channel of your choice.</p>
+            <button class="primary-button" id="openEmbedDesignerFromHome">Open the designer</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="viewChat">
+      <div class="channel-sidebar">
+        <div class="channel-sidebar-head">
+          <img id="activeGuildIcon" class="active-guild-icon" alt="">
+          <h2 id="activeGuildName">Server</h2>
+        </div>
+        <div class="channel-list" id="channelList"></div>
+      </div>
+
+      <div class="chat-main">
+        <header class="chat-header">
+          <div class="chat-header-title">
+            <span class="chat-hash">#</span>
+            <h2 id="activeChannelName">Select a channel</h2>
+          </div>
+          <button class="icon-button" id="toggleMembersButton" title="Toggle member list">👥 Members</button>
+        </header>
+
+        <div class="chat-scroll" id="chatScroll">
+          <div class="chat-empty" id="chatEmpty">
+            <p>Pick a text channel on the left to start reading and chatting.</p>
+          </div>
+        </div>
+
+        <footer class="composer">
+          <div class="composer-attachment-preview" id="composerAttachmentPreview"></div>
+          <div class="composer-row">
+            <label class="composer-attach" for="composerFileInput" title="Attach a file">📎</label>
+            <input type="file" id="composerFileInput" hidden>
+            <textarea id="composerInput" class="composer-input" placeholder="Send a message..." rows="1"></textarea>
+            <button class="icon-button" id="openEmbedDesignerFromChat" title="Build a rich announcement">✦</button>
+            <button class="primary-button composer-send" id="sendMessageButton">Send</button>
+          </div>
+        </footer>
+      </div>
+
+      <aside class="member-sidebar" id="memberSidebar">
+        <div class="member-sidebar-head">
+          <h3>Members</h3>
+        </div>
+        <div class="member-list" id="memberList"></div>
+      </aside>
+    </section>
+
+    <section class="view" id="viewDirectMessages">
+      <div class="dm-sidebar">
+        <div class="dm-sidebar-head">
+          <h2>Direct Messages</h2>
+        </div>
+        <div class="dm-new-row">
+          <input type="text" id="dmUserIdInput" class="text-input" placeholder="Open a chat with a user ID...">
+          <button class="primary-button" id="dmOpenButton">Open</button>
+        </div>
+        <div class="dm-list" id="dmList"></div>
+      </div>
+
+      <div class="chat-main">
+        <header class="chat-header">
+          <div class="chat-header-title">
+            <h2 id="activeDmName">Select a conversation</h2>
+          </div>
+        </header>
+
+        <div class="chat-scroll" id="dmChatScroll">
+          <div class="chat-empty" id="dmChatEmpty">
+            <p>Choose a conversation on the left, or open a new one with a user ID above.</p>
+          </div>
+        </div>
+
+        <footer class="composer">
+          <div class="composer-attachment-preview" id="dmComposerAttachmentPreview"></div>
+          <div class="composer-row">
+            <label class="composer-attach" for="dmComposerFileInput" title="Attach a file">📎</label>
+            <input type="file" id="dmComposerFileInput" hidden>
+            <textarea id="dmComposerInput" class="composer-input" placeholder="Send a message..." rows="1"></textarea>
+            <button class="primary-button composer-send" id="dmSendMessageButton">Send</button>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <section class="view" id="viewSettings">
+      <div class="settings-scroll">
+        <header class="settings-header">
+          <p class="dashboard-eyebrow">Configuration</p>
+          <h1>Settings</h1>
+          <p class="dashboard-sub">Fine-tune how the control room looks and behaves.</p>
+        </header>
+
+        <div class="settings-section">
+          <h2>Appearance</h2>
+          <div class="settings-row">
+            <div>
+              <p class="settings-row-title">Compact message spacing</p>
+              <p class="settings-row-sub">Reduce the gap between messages in busy channels.</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="compactModeToggle">
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+          <div class="settings-row">
+            <div>
+              <p class="settings-row-title">Show member status dots</p>
+              <p class="settings-row-sub">Display online and offline indicators on avatars.</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="statusDotsToggle" checked>
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h2>Notifications</h2>
+          <div class="settings-row">
+            <div>
+              <p class="settings-row-title">Toast alerts for errors</p>
+              <p class="settings-row-sub">Show a small banner if an action with the bot fails.</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="errorToastToggle" checked>
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h2>About this bot</h2>
+          <p class="settings-row-sub" id="settingsBotInfo">Connecting...</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal-backdrop" id="embedModalBackdrop">
+  <div class="modal-panel embed-modal">
+    <header class="modal-header">
+      <h2>Announcement Designer</h2>
+      <button class="icon-button" id="closeEmbedModal">✕</button>
+    </header>
+
+    <div class="embed-modal-body">
+      <div class="embed-form">
+        <label class="field-label">Send to channel</label>
+        <select id="embedTargetChannel" class="text-input"></select>
+
+        <label class="field-label">Title</label>
+        <input type="text" id="embedTitleInput" class="text-input" placeholder="Give your announcement a title">
+
+        <label class="field-label">Accent color</label>
+        <input type="color" id="embedColorInput" class="color-input" value="#5865f2">
+
+        <label class="field-label">Description</label>
+        <textarea id="embedDescriptionInput" class="text-input embed-textarea" placeholder="Write the main message..." rows="4"></textarea>
+
+        <div class="embed-form-split">
+          <div>
+            <label class="field-label">Author name</label>
+            <input type="text" id="embedAuthorNameInput" class="text-input" placeholder="Optional">
+          </div>
+          <div>
+            <label class="field-label">Author icon URL</label>
+            <input type="text" id="embedAuthorIconInput" class="text-input" placeholder="Optional image link">
+          </div>
+        </div>
+
+        <label class="field-label">Thumbnail URL</label>
+        <input type="text" id="embedThumbnailInput" class="text-input" placeholder="Small image in the corner">
+
+        <label class="field-label">Large image URL</label>
+        <input type="text" id="embedImageInput" class="text-input" placeholder="Full-width image">
+
+        <div class="embed-form-split">
+          <div>
+            <label class="field-label">Footer text</label>
+            <input type="text" id="embedFooterTextInput" class="text-input" placeholder="Optional">
+          </div>
+          <div>
+            <label class="field-label">Footer icon URL</label>
+            <input type="text" id="embedFooterIconInput" class="text-input" placeholder="Optional image link">
+          </div>
+        </div>
+      </div>
+
+      <div class="embed-preview-pane">
+        <p class="field-label">Live preview</p>
+        <div class="embed-preview-card" id="embedPreviewCard">
+          <div class="embed-preview-author" id="embedPreviewAuthor"></div>
+          <p class="embed-preview-title" id="embedPreviewTitle"></p>
+          <p class="embed-preview-description" id="embedPreviewDescription"></p>
+          <img class="embed-preview-image" id="embedPreviewImage" alt="">
+          <div class="embed-preview-footer" id="embedPreviewFooter"></div>
+          <img class="embed-preview-thumbnail" id="embedPreviewThumbnail" alt="">
+        </div>
+      </div>
+    </div>
+
+    <footer class="modal-footer">
+      <button class="ghost-button" id="cancelEmbedModal">Cancel</button>
+      <button class="primary-button" id="sendEmbedButton">Send announcement</button>
+    </footer>
+  </div>
+</div>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+const socket = io();
+
+const state = {
+  guilds: [],
+  channelsByGuild: {},
+  membersByGuild: {},
+  messagesByChannel: {},
+  dmChannels: [],
+  dmMessagesByChannel: {},
+  activeGuildId: null,
+  activeChannelId: null,
+  activeDmChannelId: null,
+  pendingAttachment: null,
+  pendingDmAttachment: null,
+  botInfo: null
+};
+
+const el = (id) => document.getElementById(id);
+
+function showView(viewId) {
+  document.querySelectorAll('.view').forEach((view) => view.classList.remove('view-active'));
+  el(viewId).classList.add('view-active');
+}
+
+function showToast(message, tone) {
+  const toast = document.createElement('div');
+  toast.className = `toast toast-${tone || 'info'}`;
+  toast.textContent = message;
+  el('toastStack').appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('toast-visible'));
+  setTimeout(() => {
+    toast.classList.remove('toast-visible');
+    setTimeout(() => toast.remove(), 250);
+  }, 4200);
+}
+
+function formatTimestamp(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text || '';
+  return div.innerHTML;
+}
+
+el('railHome').addEventListener('click', () => showView('viewDashboard'));
+el('railDm').addEventListener('click', () => {
+  showView('viewDirectMessages');
+  socket.emit('dm-channels-fetch');
+});
+el('railSettings').addEventListener('click', () => showView('viewSettings'));
+
+socket.on('bot-status', (data) => {
+  if (data.ready) applyBotInfo(data);
+});
+
+socket.on('bot-ready', (data) => applyBotInfo(data));
+
+function applyBotInfo(data) {
+  state.botInfo = data;
+  el('dashboardTitle').textContent = `Welcome back, ${data.username}`;
+  el('dashboardSub').textContent = 'Here is everything your bot can see and do right now.';
+  el('botPillAvatar').src = data.avatar;
+  el('botPillName').textContent = data.tag;
+  el('identityAvatarPreview').src = data.avatar;
+  el('identityUsernameInput').value = data.username;
+  el('settingsBotInfo').textContent = `Signed in as ${data.tag}. Application ID ${data.id}.`;
+  socket.emit('guilds-fetch');
+}
+
+socket.on('guilds-list', (guilds) => {
+  state.guilds = guilds;
+  renderGuildRail();
+  renderGuildGrid();
+});
+
+function renderGuildRail() {
+  const rail = el('railGuilds');
+  rail.innerHTML = '';
+  state.guilds.forEach((guild) => {
+    const button = document.createElement('button');
+    button.className = 'rail-guild-icon';
+    button.title = guild.name;
+    if (guild.icon) {
+      const img = document.createElement('img');
+      img.src = guild.icon;
+      img.alt = guild.name;
+      button.appendChild(img);
+    } else {
+      button.textContent = guild.name.slice(0, 2).toUpperCase();
+    }
+    button.addEventListener('click', () => openGuild(guild.id));
+    rail.appendChild(button);
+  });
+}
+
+function renderGuildGrid() {
+  const grid = el('guildGrid');
+  grid.innerHTML = '';
+  state.guilds.forEach((guild) => {
+    const card = document.createElement('button');
+    card.className = 'guild-grid-card';
+    card.innerHTML = `
+      <div class="guild-grid-icon">${guild.icon ? `<img src="${guild.icon}" alt="">` : guild.name.slice(0, 2).toUpperCase()}</div>
+      <div>
+        <p class="guild-grid-name">${escapeHtml(guild.name)}</p>
+        <p class="guild-grid-sub">${guild.memberCount} members</p>
+      </div>
+    `;
+    card.addEventListener('click', () => openGuild(guild.id));
+    grid.appendChild(card);
+  });
+}
+
+function openGuild(guildId) {
+  state.activeGuildId = guildId;
+  state.activeChannelId = null;
+  const guild = state.guilds.find((item) => item.id === guildId);
+  el('activeGuildName').textContent = guild ? guild.name : 'Server';
+  el('activeGuildIcon').src = guild && guild.icon ? guild.icon : '';
+  showView('viewChat');
+  socket.emit('channels-fetch', { guildId });
+  socket.emit('members-fetch', { guildId });
+}
+
+socket.on('channels-list', ({ guildId, channels }) => {
+  state.channelsByGuild[guildId] = channels;
+  if (state.activeGuildId === guildId) renderChannelList(channels);
+});
+
+function renderChannelList(channels) {
+  const list = el('channelList');
+  list.innerHTML = '';
+  const categories = channels.filter((channel) => channel.type === 4);
+  const orphanChannels = channels.filter((channel) => channel.type === 0 && !channel.parentId);
+
+  function renderTextChannel(channel) {
+    const item = document.createElement('button');
+    item.className = 'channel-item';
+    item.dataset.channelId = channel.id;
+    item.innerHTML = `<span class="channel-hash">#</span><span>${escapeHtml(channel.name)}</span>`;
+    item.addEventListener('click', () => openChannel(channel.id, channel.name));
+    return item;
+  }
+
+  orphanChannels.forEach((channel) => list.appendChild(renderTextChannel(channel)));
+
+  categories.forEach((category) => {
+    const group = document.createElement('div');
+    group.className = 'channel-category';
+    const label = document.createElement('p');
+    label.className = 'channel-category-label';
+    label.textContent = category.name;
+    group.appendChild(label);
+    channels
+      .filter((channel) => channel.type === 0 && channel.parentId === category.id)
+      .forEach((channel) => group.appendChild(renderTextChannel(channel)));
+    list.appendChild(group);
+  });
+}
+
+function openChannel(channelId, channelName) {
+  state.activeChannelId = channelId;
+  state.lastChannelFetchId = channelId;
+  el('activeChannelName').textContent = channelName;
+  document.querySelectorAll('.channel-item').forEach((item) => {
+    item.classList.toggle('channel-item-active', item.dataset.channelId === channelId);
+  });
+  const chatEmptyEl = el('chatEmpty');
+  if (chatEmptyEl) chatEmptyEl.style.display = 'none';
+  el('chatScroll').innerHTML = '<p class="chat-loading">Loading chat...</p>';
+  populateEmbedChannelOptions();
+  socket.emit('messages-fetch', { channelId });
+}
+
+socket.on('messages-list', ({ channelId, messages }) => {
+  state.messagesByChannel[channelId] = messages;
+  if (state.activeChannelId === channelId) renderChatMessages();
+  if (state.activeDmChannelId === channelId) renderDmMessages();
+});
+
+function renderChatMessages() {
+  const container = el('chatScroll');
+  const messages = state.messagesByChannel[state.activeChannelId] || [];
+  container.innerHTML = '';
+  if (messages.length === 0) {
+    container.innerHTML = '<p class="chat-loading">No messages yet in this channel.</p>';
+    return;
+  }
+  messages.forEach((message) => container.appendChild(buildMessageNode(message)));
+  container.scrollTop = container.scrollHeight;
+}
+
+const QUICK_REACTION_EMOJIS = ['👍', '👎', '❤️', '😂', '😮', '😢', '🎉', '🔥'];
+
+function buildMessageNode(message) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'message-row';
+  wrapper.dataset.messageId = message.id;
+
+  const reactionsHtml = message.reactions.map((reaction) => {
+    const label = reaction.emoji.id
+      ? `<img src="https://cdn.discordapp.com/emojis/${reaction.emoji.id}.${reaction.emoji.animated ? 'gif' : 'png'}" class="reaction-emoji-img" alt="">`
+      : escapeHtml(reaction.emoji.name);
+    return `<button class="reaction-chip ${reaction.me ? 'reaction-chip-active' : ''}" data-emoji-id="${reaction.emoji.id || ''}" data-emoji-name="${escapeHtml(reaction.emoji.name)}">${label} ${reaction.count}</button>`;
+  }).join('');
+
+  const attachmentsHtml = message.attachments.map((attachment) => {
+    if (attachment.contentType && attachment.contentType.startsWith('image/')) {
+      return `<img class="message-attachment-image" src="${attachment.url}" alt="${escapeHtml(attachment.name)}">`;
+    }
+    return `<a class="message-attachment-file" href="${attachment.url}" target="_blank" rel="noopener">📎 ${escapeHtml(attachment.name)}</a>`;
+  }).join('');
+
+  const embedsHtml = message.embeds.map((embed) => buildEmbedPreviewHtml(embed)).join('');
+
+  wrapper.innerHTML = `
+    <button class="message-avatar-button" title="Message ${escapeHtml(message.author.displayName)} directly">
+      <img class="message-avatar" src="${message.author.avatar}" alt="">
+    </button>
+    <div class="message-body">
+      <div class="message-meta">
+        <button class="message-author" title="Message ${escapeHtml(message.author.displayName)} directly">${escapeHtml(message.author.displayName)}</button>
+        <span class="message-timestamp">${formatTimestamp(message.timestamp)}${message.editedTimestamp ? ' (edited)' : ''}</span>
+      </div>
+      <div class="message-content-wrap">
+        ${message.content ? `<p class="message-content">${escapeHtml(message.content)}</p>` : ''}
+      </div>
+      ${attachmentsHtml}
+      ${embedsHtml}
+      <div class="reaction-row">
+        ${reactionsHtml}
+        <div class="reaction-add-wrap">
+          <button class="reaction-add-button" title="Add a reaction">😊+</button>
+          <div class="reaction-picker">
+            ${QUICK_REACTION_EMOJIS.map((emoji) => `<button class="reaction-picker-option" data-emoji="${emoji}">${emoji}</button>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-hover-actions">
+      ${message.isOwnedByBot ? '<button class="message-action-button message-edit-button" title="Edit this message">✎</button>' : ''}
+      ${message.isOwnedByBot ? '<button class="message-action-button message-delete-button" title="Delete this message">🗑</button>' : ''}
+    </div>
+  `;
+
+  if (!message.isOwnedByBot) {
+    wrapper.querySelector('.message-avatar-button').addEventListener('click', () => openDmWithUser(message.author.id, message.author.displayName));
+    wrapper.querySelector('.message-author').addEventListener('click', () => openDmWithUser(message.author.id, message.author.displayName));
+  } else {
+    wrapper.querySelector('.message-avatar-button').classList.add('message-profile-disabled');
+    wrapper.querySelector('.message-author').classList.add('message-profile-disabled');
+  }
+
+  if (message.isOwnedByBot) {
+    wrapper.querySelector('.message-delete-button').addEventListener('click', () => {
+      socket.emit('message-delete-request', { channelId: message.channelId, messageId: message.id });
+    });
+    wrapper.querySelector('.message-edit-button').addEventListener('click', () => {
+      enterEditMode(wrapper, message);
+    });
+  }
+
+  wrapper.querySelectorAll('.reaction-chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      socket.emit('reaction-toggle', {
+        channelId: message.channelId,
+        messageId: message.id,
+        emoji: { id: chip.dataset.emojiId || null, name: chip.dataset.emojiName }
+      });
+    });
+  });
+
+  const reactionAddWrap = wrapper.querySelector('.reaction-add-wrap');
+  const reactionAddButton = wrapper.querySelector('.reaction-add-button');
+  reactionAddButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    document.querySelectorAll('.reaction-add-wrap-open').forEach((openWrap) => {
+      if (openWrap !== reactionAddWrap) openWrap.classList.remove('reaction-add-wrap-open');
+    });
+    reactionAddWrap.classList.toggle('reaction-add-wrap-open');
+  });
+
+  wrapper.querySelectorAll('.reaction-picker-option').forEach((option) => {
+    option.addEventListener('click', (event) => {
+      event.stopPropagation();
+      socket.emit('reaction-add-request', {
+        channelId: message.channelId,
+        messageId: message.id,
+        emoji: option.dataset.emoji
+      });
+      reactionAddWrap.classList.remove('reaction-add-wrap-open');
+    });
+  });
+
+  return wrapper;
+}
+
+function buildEmbedPreviewHtml(embed) {
+  const color = embed.color ? `#${embed.color.toString(16).padStart(6, '0')}` : '#5865f2';
+  return `
+    <div class="message-embed" style="border-left-color:${color}">
+      ${embed.author ? `<p class="message-embed-author">${embed.author.icon_url ? `<img src="${embed.author.icon_url}" class="message-embed-author-icon" alt="">` : ''}${escapeHtml(embed.author.name)}</p>` : ''}
+      ${embed.title ? `<p class="message-embed-title">${escapeHtml(embed.title)}</p>` : ''}
+      ${embed.description ? `<p class="message-embed-description">${escapeHtml(embed.description)}</p>` : ''}
+      ${embed.image ? `<img src="${embed.image.url}" class="message-embed-image" alt="">` : ''}
+      ${embed.footer ? `<p class="message-embed-footer">${embed.footer.icon_url ? `<img src="${embed.footer.icon_url}" class="message-embed-footer-icon" alt="">` : ''}${escapeHtml(embed.footer.text)}</p>` : ''}
+    </div>
+  `;
+}
+
+function enterEditMode(wrapper, message) {
+  const contentWrap = wrapper.querySelector('.message-content-wrap');
+  const previousHtml = contentWrap.innerHTML;
+  contentWrap.innerHTML = `
+    <div class="message-edit-box">
+      <textarea class="message-edit-textarea" rows="2">${escapeHtml(message.content)}</textarea>
+      <div class="message-edit-actions">
+        <button class="ghost-button message-edit-cancel">Cancel</button>
+        <button class="primary-button message-edit-save">Save changes</button>
+      </div>
+    </div>
+  `;
+  const textarea = contentWrap.querySelector('.message-edit-textarea');
+  textarea.focus();
+  textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+
+  function exitEditMode() {
+    contentWrap.innerHTML = previousHtml;
+  }
+
+  contentWrap.querySelector('.message-edit-cancel').addEventListener('click', exitEditMode);
+
+  contentWrap.querySelector('.message-edit-save').addEventListener('click', () => {
+    const newContent = textarea.value.trim();
+    if (!newContent) {
+      showToast('An edited message cannot be empty.', 'error');
+      return;
+    }
+    socket.emit('message-edit-request', {
+      channelId: message.channelId,
+      messageId: message.id,
+      content: newContent
+    });
+    exitEditMode();
+  });
+
+  textarea.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      contentWrap.querySelector('.message-edit-save').click();
+    }
+    if (event.key === 'Escape') {
+      exitEditMode();
+    }
+  });
+}
+
+function openDmWithUser(userId, displayName) {
+  showView('viewDirectMessages');
+  socket.emit('dm-channels-fetch');
+  socket.emit('dm-open-request', { userId });
+  showToast(`Opening a direct message with ${displayName}...`, 'info');
+}
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.reaction-add-wrap-open').forEach((openWrap) => openWrap.classList.remove('reaction-add-wrap-open'));
+});
+
+
+
+socket.on('message-new', (message) => {
+  if (!state.messagesByChannel[message.channelId]) state.messagesByChannel[message.channelId] = [];
+  state.messagesByChannel[message.channelId].push(message);
+  if (state.activeChannelId === message.channelId) renderChatMessages();
+});
+
+socket.on('message-edit', (message) => {
+  const list = state.messagesByChannel[message.channelId];
+  if (!list) return;
+  const index = list.findIndex((item) => item.id === message.id);
+  if (index !== -1) list[index] = message;
+  if (state.activeChannelId === message.channelId) renderChatMessages();
+  if (state.activeDmChannelId === message.channelId) renderDmMessages();
+});
+
+socket.on('message-delete', ({ id, channelId }) => {
+  const list = state.messagesByChannel[channelId];
+  if (!list) return;
+  state.messagesByChannel[channelId] = list.filter((item) => item.id !== id);
+  if (state.activeChannelId === channelId) renderChatMessages();
+  if (state.activeDmChannelId === channelId) renderDmMessages();
+});
+
+socket.on('reaction-update', ({ messageId, channelId, reactions }) => {
+  const list = state.messagesByChannel[channelId];
+  if (!list) return;
+  const index = list.findIndex((item) => item.id === messageId);
+  if (index !== -1) list[index].reactions = reactions;
+  if (state.activeChannelId === channelId) renderChatMessages();
+  if (state.activeDmChannelId === channelId) renderDmMessages();
+});
+
+socket.on('members-list', ({ guildId, members }) => {
+  state.membersByGuild[guildId] = members;
+  if (state.activeGuildId === guildId) renderMemberList(members);
+});
+
+socket.on('member-update', ({ guildId, member }) => {
+  const list = state.membersByGuild[guildId];
+  if (!list) return;
+  const index = list.findIndex((item) => item.id === member.id);
+  if (index !== -1) list[index] = member; else list.push(member);
+  if (state.activeGuildId === guildId) renderMemberList(list);
+});
+
+function renderMemberList(members) {
+  const container = el('memberList');
+  container.innerHTML = '';
+  const sorted = [...members].sort((a, b) => {
+    if (a.status === 'offline' && b.status !== 'offline') return 1;
+    if (b.status === 'offline' && a.status !== 'offline') return -1;
+    return a.displayName.localeCompare(b.displayName);
+  });
+  sorted.forEach((member) => {
+    const row = document.createElement('button');
+    row.className = 'member-row';
+    const isSelf = state.botInfo && member.id === state.botInfo.id;
+    if (isSelf) row.classList.add('member-row-self');
+    row.innerHTML = `
+      <div class="member-avatar-wrap">
+        <img class="member-avatar" src="${member.avatar}" alt="">
+        <span class="status-dot ${member.status === 'online' || member.status === 'idle' || member.status === 'dnd' ? 'online' : 'offline'}"></span>
+      </div>
+      <span class="member-name" style="${member.roleColor ? `color:${member.roleColor}` : ''}">${escapeHtml(member.displayName)}</span>
+    `;
+    if (!isSelf) {
+      row.title = `Message ${member.displayName} directly`;
+      row.addEventListener('click', () => openDmWithUser(member.id, member.displayName));
+    }
+    container.appendChild(row);
+  });
+}
+
+el('toggleMembersButton').addEventListener('click', () => {
+  el('memberSidebar').classList.toggle('member-sidebar-open');
+});
+
+function setupComposer(textareaId, fileInputId, previewId, sendButtonId, attachmentKey, sendHandler) {
+  const textarea = el(textareaId);
+  textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${Math.min(textarea.scrollHeight, 160)}px`;
+  });
+  textarea.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      sendHandler();
+    }
+  });
+
+  el(fileInputId).addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result.split(',')[1];
+      state[attachmentKey] = { filename: file.name, base64, previewUrl: reader.result, isImage: file.type.startsWith('image/') };
+      renderAttachmentPreview(previewId, attachmentKey);
+    };
+    reader.readAsDataURL(file);
+  });
+
+  el(sendButtonId).addEventListener('click', sendHandler);
+}
+
+function renderAttachmentPreview(previewId, attachmentKey) {
+  const container = el(previewId);
+  const attachment = state[attachmentKey];
+  if (!attachment) {
+    container.innerHTML = '';
+    container.classList.remove('composer-attachment-preview-visible');
+    return;
+  }
+  container.classList.add('composer-attachment-preview-visible');
+  container.innerHTML = `
+    ${attachment.isImage ? `<img src="${attachment.previewUrl}" class="composer-preview-thumb" alt="">` : '<span class="composer-preview-file-icon">📎</span>'}
+    <span class="composer-preview-name">${escapeHtml(attachment.filename)}</span>
+    <button class="composer-preview-remove" id="${attachmentKey}RemoveButton">✕</button>
+  `;
+  el(`${attachmentKey}RemoveButton`).addEventListener('click', () => {
+    state[attachmentKey] = null;
+    renderAttachmentPreview(previewId, attachmentKey);
+  });
+}
+
+setupComposer('composerInput', 'composerFileInput', 'composerAttachmentPreview', 'sendMessageButton', 'pendingAttachment', () => {
+  if (!state.activeChannelId) return;
+  const textarea = el('composerInput');
+  const content = textarea.value.trim();
+  if (!content && !state.pendingAttachment) return;
+  socket.emit('message-send', {
+    channelId: state.activeChannelId,
+    content,
+    attachment: state.pendingAttachment ? { filename: state.pendingAttachment.filename, base64: state.pendingAttachment.base64 } : null
+  });
+  textarea.value = '';
+  textarea.style.height = 'auto';
+  state.pendingAttachment = null;
+  renderAttachmentPreview('composerAttachmentPreview', 'pendingAttachment');
+});
+
+setupComposer('dmComposerInput', 'dmComposerFileInput', 'dmComposerAttachmentPreview', 'dmSendMessageButton', 'pendingDmAttachment', () => {
+  if (!state.activeDmChannelId) return;
+  const textarea = el('dmComposerInput');
+  const content = textarea.value.trim();
+  if (!content && !state.pendingDmAttachment) return;
+  socket.emit('message-send', {
+    channelId: state.activeDmChannelId,
+    content,
+    attachment: state.pendingDmAttachment ? { filename: state.pendingDmAttachment.filename, base64: state.pendingDmAttachment.base64 } : null
+  });
+  textarea.value = '';
+  textarea.style.height = 'auto';
+  state.pendingDmAttachment = null;
+  renderAttachmentPreview('dmComposerAttachmentPreview', 'pendingDmAttachment');
+});
+
+socket.on('dm-channel-update', (channels) => {
+  state.dmChannels = channels;
+  renderDmList();
+});
+
+function renderDmList() {
+  const container = el('dmList');
+  container.innerHTML = '';
+  const sorted = [...state.dmChannels].sort((a, b) => b.lastMessageTimestamp - a.lastMessageTimestamp);
+  sorted.forEach((channel) => {
+    const item = document.createElement('button');
+    item.className = 'dm-item';
+    item.dataset.channelId = channel.id;
+    item.innerHTML = `
+      <img class="dm-item-avatar" src="${channel.recipientAvatar || ''}" alt="">
+      <span>${escapeHtml(channel.recipientUsername || 'Direct message')}</span>
+    `;
+    item.addEventListener('click', () => openDmChannel(channel.id, channel.recipientUsername));
+    container.appendChild(item);
+  });
+}
+
+function openDmChannel(channelId, recipientUsername) {
+  state.activeDmChannelId = channelId;
+  el('activeDmName').textContent = recipientUsername || 'Direct message';
+  document.querySelectorAll('.dm-item').forEach((item) => {
+    item.classList.toggle('channel-item-active', item.dataset.channelId === channelId);
+  });
+  const dmChatEmptyEl = el('dmChatEmpty');
+  if (dmChatEmptyEl) dmChatEmptyEl.style.display = 'none';
+  el('dmChatScroll').innerHTML = '<p class="chat-loading">Loading chat...</p>';
+  socket.emit('messages-fetch', { channelId });
+}
+
+socket.on('dm-new', (message) => {
+  if (!state.messagesByChannel[message.channelId]) state.messagesByChannel[message.channelId] = [];
+  state.messagesByChannel[message.channelId].push(message);
+  if (state.activeDmChannelId === message.channelId) renderDmMessages();
+});
+
+function renderDmMessages() {
+  const container = el('dmChatScroll');
+  const messages = state.messagesByChannel[state.activeDmChannelId] || [];
+  container.innerHTML = '';
+  if (messages.length === 0) {
+    container.innerHTML = '<p class="chat-loading">No messages yet in this conversation.</p>';
+    return;
+  }
+  messages.forEach((message) => container.appendChild(buildMessageNode(message)));
+  container.scrollTop = container.scrollHeight;
+}
+
+el('dmOpenButton').addEventListener('click', () => {
+  const input = el('dmUserIdInput');
+  const userId = input.value.trim();
+  if (!userId) return;
+  socket.emit('dm-open-request', { userId });
+});
+
+socket.on('dm-opened', ({ channelId, recipientUsername }) => {
+  el('dmUserIdInput').value = '';
+  openDmChannel(channelId, recipientUsername);
+});
+
+el('identityAvatarInput').addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    el('identityAvatarPreview').src = reader.result;
+    state.pendingIdentityAvatar = reader.result.split(',')[1];
+  };
+  reader.readAsDataURL(file);
+});
+
+el('identitySaveButton').addEventListener('click', () => {
+  socket.emit('bot-identity-update', {
+    username: el('identityUsernameInput').value,
+    avatarBase64: state.pendingIdentityAvatar || null
+  });
+});
+
+socket.on('bot-identity-updated', () => {
+  showToast('Your bot profile has been updated.', 'success');
+  state.pendingIdentityAvatar = null;
+});
+
+socket.on('error-toast', ({ message }) => showToast(message, 'error'));
+
+function populateEmbedChannelOptions() {
+  const select = el('embedTargetChannel');
+  select.innerHTML = '';
+  const channels = state.channelsByGuild[state.activeGuildId] || [];
+  channels.filter((channel) => channel.type === 0).forEach((channel) => {
+    const option = document.createElement('option');
+    option.value = channel.id;
+    option.textContent = `# ${channel.name}`;
+    if (channel.id === state.activeChannelId) option.selected = true;
+    select.appendChild(option);
+  });
+}
+
+function openEmbedModal() {
+  populateEmbedChannelOptions();
+  el('embedModalBackdrop').classList.add('modal-backdrop-visible');
+  updateEmbedPreview();
+}
+
+function closeEmbedModal() {
+  el('embedModalBackdrop').classList.remove('modal-backdrop-visible');
+}
+
+el('openEmbedDesignerFromHome').addEventListener('click', openEmbedModal);
+el('openEmbedDesignerFromChat').addEventListener('click', openEmbedModal);
+el('closeEmbedModal').addEventListener('click', closeEmbedModal);
+el('cancelEmbedModal').addEventListener('click', closeEmbedModal);
+el('embedModalBackdrop').addEventListener('click', (event) => {
+  if (event.target === el('embedModalBackdrop')) closeEmbedModal();
+});
+
+['embedTitleInput', 'embedDescriptionInput', 'embedColorInput', 'embedAuthorNameInput', 'embedAuthorIconInput', 'embedThumbnailInput', 'embedImageInput', 'embedFooterTextInput', 'embedFooterIconInput'].forEach((id) => {
+  el(id).addEventListener('input', updateEmbedPreview);
+});
+
+function updateEmbedPreview() {
+  const color = el('embedColorInput').value;
+  el('embedPreviewCard').style.borderLeftColor = color;
+
+  const authorName = el('embedAuthorNameInput').value;
+  const authorIcon = el('embedAuthorIconInput').value;
+  el('embedPreviewAuthor').innerHTML = authorName
+    ? `${authorIcon ? `<img src="${authorIcon}" class="embed-preview-author-icon" alt="">` : ''}<span>${escapeHtml(authorName)}</span>`
+    : '';
+
+  el('embedPreviewTitle').textContent = el('embedTitleInput').value;
+  el('embedPreviewDescription').textContent = el('embedDescriptionInput').value;
+
+  const imageUrl = el('embedImageInput').value;
+  const imageNode = el('embedPreviewImage');
+  if (imageUrl) { imageNode.src = imageUrl; imageNode.style.display = 'block'; } else { imageNode.style.display = 'none'; }
+
+  const thumbnailUrl = el('embedThumbnailInput').value;
+  const thumbnailNode = el('embedPreviewThumbnail');
+  if (thumbnailUrl) { thumbnailNode.src = thumbnailUrl; thumbnailNode.style.display = 'block'; } else { thumbnailNode.style.display = 'none'; }
+
+  const footerText = el('embedFooterTextInput').value;
+  const footerIcon = el('embedFooterIconInput').value;
+  el('embedPreviewFooter').innerHTML = footerText
+    ? `${footerIcon ? `<img src="${footerIcon}" class="embed-preview-footer-icon" alt="">` : ''}<span>${escapeHtml(footerText)}</span>`
+    : '';
+}
+
+el('sendEmbedButton').addEventListener('click', () => {
+  const channelId = el('embedTargetChannel').value;
+  if (!channelId) {
+    showToast('Choose a channel to send this announcement to.', 'error');
+    return;
+  }
+  const colorHex = el('embedColorInput').value.replace('#', '');
+  socket.emit('message-send', {
+    channelId,
+    content: '',
+    embed: {
+      title: el('embedTitleInput').value || null,
+      description: el('embedDescriptionInput').value || null,
+      color: parseInt(colorHex, 16),
+      authorName: el('embedAuthorNameInput').value || null,
+      authorIcon: el('embedAuthorIconInput').value || null,
+      thumbnailUrl: el('embedThumbnailInput').value || null,
+      imageUrl: el('embedImageInput').value || null,
+      footerText: el('embedFooterTextInput').value || null,
+      footerIcon: el('embedFooterIconInput').value || null
+    }
+  });
+  closeEmbedModal();
+  showToast('Your announcement has been sent.', 'success');
+});
+
+el('compactModeToggle').addEventListener('change', (event) => {
+  document.body.classList.toggle('compact-mode', event.target.checked);
+});
+
+el('statusDotsToggle').addEventListener('change', (event) => {
+  document.body.classList.toggle('hide-status-dots', !event.target.checked);
+});
+
+</script>
+</body>
+</html>
