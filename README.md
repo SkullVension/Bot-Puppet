@@ -47,11 +47,11 @@ npm install
 This repository includes a `.env.example` file to show you the template layout. To set up your environment:
 
 1. Duplicate `.env.example` and rename the new file to exactly `.env`.
-2. Open your new `.env` file and set your desired hosting port:
+2. Open your new `.env` file and configure your local variables:
 
 ```env
 PORT=3000
-
+DISCORD_TOKEN=your_actual_discord_bot_token_here
 ```
 
 *(Note: Your private Discord Bot Token should be entered directly through the secure dashboard interface on launch, keeping it out of configuration files entirely).*
