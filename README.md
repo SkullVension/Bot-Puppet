@@ -51,7 +51,7 @@ This repository includes a `.env.example` file to show you the template layout. 
 
 ```env
 PORT=3000
-DISCORD_TOKEN=your_actual_discord_bot_token_here
+DISCORD_BOT_TOKEN=your_actual_discord_bot_token_here
 ```
 
 *(Note: Your private Discord Bot Token should be entered directly through the secure dashboard interface on launch, keeping it out of configuration files entirely).*
